@@ -45,7 +45,7 @@ function employeeUpdater() {
       employees[i]["department"] = "HR";
     }
   } 
-  return employees();
+  return employees;
 }
 
 
@@ -73,7 +73,7 @@ function removeDuplicates() {
   } 
   return workplaceAccidents;
 }
-
+removeDuplicates()
 
 
 
@@ -101,8 +101,8 @@ var cat = {
 
 // Code here
 
-var grumpyActivity;
-var fluffy2ndFriend;
+var grumpyActivity = cat["catFriends"][0]["activities"][1];
+var fluffy2ndFriend = cat["catFriends"][1]["name"];
 
 
 
@@ -139,7 +139,14 @@ var myCar = {
   ]
 }
 
-// Code here
+function recordCleaner() {
+  for (var i = 0; i < myCar.accidents.length; i++) {
+    if (myCar.accidents[i].atFaultForAccident) {
+      myCar.accidents[i].atFaultForAccident = false;
+    }
+  }
+}
+
 
 
 
@@ -160,6 +167,16 @@ var myCar = {
 
 var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 
-
+function looper() {
+  for (var i = 0; i < numsArr.length; i++) {
+    for (var j = 0; j < numsArr.length[i]; j++) {
+      if (numsArr[i][j] % 2 !== 0) {
+        numsArr[i][j] = "odd";
+      } else {
+        numsArr[i][j] = "even";
+      }
+    }
+  } return numsArr;
+}
 
 
